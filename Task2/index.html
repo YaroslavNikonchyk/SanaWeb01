@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <title>Sana Web01 Task2</title>
+</head>
+<html>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Анкета для сайту знайомств</legend>
+        <div>
+          <div class="space-between">
+            <label>Ім'я:</label
+            ><input
+              type="text"
+              name="name"
+              placeholder="Введіть ім'я"
+              pattern="[A-Za-z]+"
+              required
+            />
+          </div>
+          <div class="space-between">
+            <label>Email:</label
+            ><input
+              type="text"
+              name="Email"
+              placeholder="example@example.com"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="space-between">
+            <label>Вік:</label
+            ><input
+              type="number"
+              name="age"
+              placeholder="Введіть вік"
+              pattern="[0-9]+"
+              required
+            />
+          </div>
+          <div class="space-between">
+            <label>Стать:</label>
+            <label
+              ><input type="radio" name="gender" value="male" /> Чоловік</label
+            >
+            <label>
+              <input type="radio" name="gender" value="male" /> Жінка</label
+            >
+            <span>❌Інше</span>
+          </div>
+
+          <div class="space-between">
+            <label>Завантажте фото:</label>
+            <input type="file" name="file" class="margin-for-file" multiple />
+          </div>
+          <div class="space-between">
+            <label for="file">Прогрес завантаження:</label>
+            <progress id="file" value="30" max="100"></progress>
+          </div>
+          <div class="space-between">
+            <label>Вага вашого фото:</label>
+            <meter
+              id="disk_c"
+              min="0"
+              max="100"
+              low="20"
+              high="80"
+              optimum="60"
+              value="30"
+            ></meter>
+          </div>
+          <div class="space-between">
+            <label>Надати доступ до фото</label
+            ><input type="text" list="data" placeholder="Ім'я користувача" />
+            <datalist id="data">
+              <option value="Всім" />
+              <option value="Контактам" />
+              <option value="Друзям" />
+            </datalist>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="space-between">
+              <label>Ваш день народження:</label
+              ><input type="date" name="date" class="width" required />
+            </div>
+            <div class="space-between">
+              <label>Ваш улюблений колір:</label
+              ><input type="color" name="color" class="width" />
+            </div>
+            <div class="space-between">
+              <label>Наскільки ви себе оцінюєте?</label
+              ><input type="range" name="range" min="1" max="10" />
+            </div>
+          </div>
+          <div>
+            <label>Надайте трішки інформації про себе:</label>
+            <textarea
+              name="description"
+              id="description"
+              cols="49"
+              rows="4"
+              spellcheck="false"
+              placeholder="Нікончук Ярослав, фул-стек розробник, займаюсь спортом ..."
+            ></textarea>
+          </div>
+          <label>Виберіть які дівчата/хлопці вам подобаються</label>
+          <select multiple>
+            <optgroup label="Колір волосся">
+              <option>Чорняві</option>
+              <option>Світлі</option>
+            </optgroup>
+            <optgroup label="Зріст">
+              <option>Високі</option>
+              <option>Низькі</option>
+            </optgroup>
+            <optgroup label="Форма">
+              <option>Повні</option>
+              <option>Худі</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="buttons">
+          <input type="reset" value="Очистити" />
+          <input type="submit" value="Надіслати" />
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
